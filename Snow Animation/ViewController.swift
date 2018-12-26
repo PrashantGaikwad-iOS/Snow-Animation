@@ -12,9 +12,15 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        makeItSnow()
     }
-
+    
+    func makeItSnow() {
+        let emitter = SnowEmitter.getEmitterThat(emits: #imageLiteral(resourceName: "snow"))
+        emitter.emitterPosition = CGPoint(x: view.frame.size.width / 2, y: 0)
+        emitter.emitterSize = CGSize(width: view.frame.size.width, height: 2.0)
+        view.layer.addSublayer(emitter)
+    }
 
 }
 
