@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
     
     func makeItSnow() {
-        let emitter = SnowEmitter.getEmitterThat(emits: #imageLiteral(resourceName: "snow"))
+        let emitter = SnowEmitter.getEmitterThat(emits: #imageLiteral(resourceName: "christmas-snowflake"))
         emitter.emitterPosition = CGPoint(x: view.frame.size.width / 2, y: 0)
         emitter.emitterSize = CGSize(width: view.frame.size.width, height: 2.0)
         view.layer.addSublayer(emitter)
